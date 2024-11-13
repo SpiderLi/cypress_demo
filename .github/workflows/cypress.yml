@@ -49,7 +49,7 @@ jobs:
 
       - name: Run BrowserStack Tests
         run: |
-          npm run test:browserstack  # Replace with the actual test command for BrowserStack
+          npm run test-browserstack  # Replace with the actual test command for BrowserStack
         env:
           BROWSERSTACK_USERNAME: ${{ secrets.BROWSERSTACK_USERNAME }}
           BROWSERSTACK_ACCESS_KEY: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
