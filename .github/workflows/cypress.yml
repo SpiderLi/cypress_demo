@@ -38,7 +38,7 @@ jobs:
         with:
           repository: MoeGolibrary/moego-e2e-autotest  # Correct format
           ref: moego-e2e-autotest
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.MY_GITHUB_TOKEN }}
 
       - name: Install Dependencies for moego-e2e-autotest
         run: |
