@@ -42,7 +42,6 @@ jobs:
 
       - name: Install Dependencies for moego-e2e-autotest
         run: |
-          cd moego-e2e-autotest
           npm install  # Assuming the project uses npm for dependency management
 
       - name: Run BrowserStack Tests
