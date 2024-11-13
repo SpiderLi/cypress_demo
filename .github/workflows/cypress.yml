@@ -36,7 +36,7 @@ jobs:
       - name: Checkout moego-e2e-autotest Repository
         uses: actions/checkout@v4
         with:
-          repository: MoeGolibrary/moego-e2e-autotest
+          repository: https://github.com/MoeGolibrary/moego-e2e-autotest
           token: ${{ secrets.GITHUB_TOKEN }}
           path: moego-e2e-autotest  # Store it in a separate directory
 
