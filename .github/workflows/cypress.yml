@@ -31,3 +31,24 @@ jobs:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           # Creating a token https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+
+      - name: Checkout moego-e2e-autotest Repository
+        uses: actions/checkout@v4
+        with:
+          repository: MoeGolibrary/moego-e2e-autotest
+          token: ${{ secrets.GITHUB_TOKEN }}
+          path: moego-e2e-autotest  # Store it in a separate directory
+
+      - name: Install Dependencies for moego-e2e-autotest
+        run: |
+          cd moego-e2e-autotest
+          npm install  # Assuming the project uses npm for dependency management
+
+      - name: Run BrowserStack Tests
+        run: |
+          cd moego-e2e-autotest
+          npm run test:browserstack  # Replace with the actual test command for BrowserStack
+        env:
+          BROWSERSTACK_USERNAME: ${{ secrets.BROWSERSTACK_USERNAME }}
+          BROWSERSTACK_ACCESS_KEY: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}

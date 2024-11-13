@@ -1,5 +1,6 @@
 {
-  "dependencies": {
-    "cypress": "^9.7.0"
+  "devDependencies": {
+    "cypress": "^13.15.1",
+    "cypress-fail-fast": "^7.1.1"
   }
 }
