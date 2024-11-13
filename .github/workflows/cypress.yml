@@ -47,6 +47,10 @@ jobs:
 
       - name: Run BrowserStack Tests
         run: |
+          echo "Current directory:"
+          pwd  # Print the current working directory
+          echo "Listing files in the current directory:"
+          ls -al  # List all files in the current directory
           cd moego-e2e-autotest
           npm run test:browserstack  # Replace with the actual test command for BrowserStack
         env:
